@@ -10,7 +10,8 @@
 ## Repository & Live Deployment
 
 - **GitHub Repository:** [https://github.com/naveenrajamoni89-lab/backend-lab-2](https://github.com/naveenrajamoni89-lab/backend-lab-2)
-- **Live URL:** Not applicable (tested locally with Postman / SQLite CLI)
+- **Live URL:** [https://backend-lab-2-2-geyl.onrender.com/](https://backend-lab-2-2-geyl.onrender.com/)
+- **Live Books API Endpoint:** [https://backend-lab-2-2-geyl.onrender.com/books/](https://backend-lab-2-2-geyl.onrender.com/books/)
 
 ---
 
@@ -101,7 +102,19 @@ CREATE TABLE IF NOT EXISTS book (
 
 ## Screenshots
 
-### A. SQLite CLI Database Verification
+### A. Live Cloud Deployment on Render
+
+#### 1. Live Root Landing Page (`GET /`)
+Live deployment on Render verifying server status, student details, and API link.
+![Render Live Home](screenshots/render-live-home.png)
+
+#### 2. Live Books API Response (`GET /books/`)
+Live production API on Render serving the complete database records in JSON format.
+![Render Live Books](screenshots/render-live-books.png)
+
+---
+
+### B. SQLite CLI Database Verification
 
 #### 1. Table Schema (`PRAGMA table_info(book);`)
 ![Table Schema](screenshots/sqlite-table-schema.png)
@@ -114,7 +127,7 @@ CREATE TABLE IF NOT EXISTS book (
 
 ---
 
-### B. Postman / API Endpoints Testing
+### C. Postman / API Endpoints Testing
 
 #### 1. Root / Welcome Endpoint (`GET /`)
 Shows the home landing response with the link to `/books/`.
