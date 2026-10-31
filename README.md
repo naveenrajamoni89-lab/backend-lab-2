@@ -177,3 +177,7 @@ Accessing any undefined route (e.g., `GET /unknown`) cleanly returns HTTP `404 N
    - *Problem:* Starting the Express server before SQLite finishes opening the database leads to unhandled database errors on incoming requests.
    - *Solution:* Encapsulated the setup inside `initializeDBAndServer()`, awaiting `open(...)` before executing `app.listen(PORT, ...)`.
 
+5. **Render Deployment Failure (`GLIBC_2.38 not found` in `node_sqlite3.node`)**
+   - *Problem:* Render's default environment used Node 24 which downloaded precompiled `sqlite3` binaries compiled against Linux `GLIBC_2.38`, while Render's Ubuntu container runs `GLIBC 2.35`.
+   - *Solution:* Pinned the project to Node.js LTS (20.x) using `.node-version` and added `"build": "npm rebuild sqlite3 --build-from-source"` in `package.json` so `sqlite3` compiles directly against Render's native system libraries.
+
