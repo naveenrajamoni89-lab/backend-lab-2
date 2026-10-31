@@ -7,8 +7,9 @@
 
 ---
 
-## Live Deployment
+## Repository & Live Deployment
 
+- **GitHub Repository:** [https://github.com/naveenrajamoni89-lab/backend-lab-2](https://github.com/naveenrajamoni89-lab/backend-lab-2)
 - **Live URL:** Not applicable (tested locally with Postman / SQLite CLI)
 
 ---
